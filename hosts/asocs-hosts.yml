@@ -1,0 +1,65 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - portal
+  - source
+  - website
+hosts:
+- host: api.asocscloud.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: asocscloud.com
+  role: api
+  relation: own
+- host: asocscloud.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Newsroom
+  - Documentation
+  - Website
+  serves:
+  - docs
+  registrable_domain: asocscloud.com
+  role: website
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: portal.asocscloud.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: asocscloud.com
+  role: portal
+  relation: own

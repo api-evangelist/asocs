@@ -1,23 +1,71 @@
 aid: asocs
+
 name: Asocs
-description: 'Asocs is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'ASOCS provides industrial digital transformation solutions, offering 5G‑enabled connectivity, generative AI for physical systems, and robust platforms like CYRUS® and HERMES to synchronize digital twins, autonomous machines, and processes across factories, ports, and logistics hubs.'
+
 url: https://raw.githubusercontent.com/api-evangelist/asocs/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Industrial 5G
+- Private Networks
+- AI Positioning
+- AI Kits
+- Enterprise Solutions
+- System Integrators
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/asocs-hosts.yml
+- type: TermsOfService
+  url: https://asocscloud.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://asocscloud.com/privacy-policy/
+- type: Newsroom
+  url: https://asocscloud.com/category/news/
+- type: Documentation
+  url: https://asocscloud.com/category/guides/
+- type: DeveloperPortal
+  url: https://portal.asocscloud.com/
+- type: GitHubOrganization
+  url: https://github.com/asocscloud
+- type: DomainSecurity
+  url: security/asocs-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/asocs
+  url: https://asocscloud.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found on asocscloud.com or its subdomains.
+  evidence:
+    - url: https://asocscloud.com/openapi.json
+      status: 404
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
